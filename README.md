@@ -277,3 +277,22 @@ X-Powered-By: Express
 Note that I ran this task *after* having run Tasks 2.1 and 2.2. Hence, a contact named "Kyrollos" existed.
 
 ### Task 2.4
+```bash
+vboxuser@CSE5006:~/Documents/assignment2$ http put http://localhost/api/contacts/1 name="Kyrollos NEW"
+
+HTTP/1.1 200 OK
+Access-Control-Allow-Origin: http://localhost:3000
+Connection: keep-alive
+Content-Length: 47
+Content-Type: application/json; charset=utf-8
+Date: Thu, 17 Oct 2024 10:37:40 GMT
+ETag: W/"2f-9DEigpdI8FmatdY6qgJYc7CM5hQ"
+Server: nginx/1.25.1
+Vary: Origin
+X-Powered-By: Express
+
+{
+    "message": "Contact was updated successfully."
+}
+```
+Contact 1 was previously "Kyrollos".

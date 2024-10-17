@@ -248,33 +248,23 @@ X-Powered-By: Express
 
 ### Task 2.3
 ```bash
-vboxuser@CSE5006:~/Documents/assignment2$ http delete http://localhost/api/contacts name="Kyrollos"
-
-HTTP/1.1 404 Not Found
+vboxuser@CSE5006:~/Documents/assignment2$ http delete http://localhost/api/contacts/2
+HTTP/1.1 200 OK
 Access-Control-Allow-Origin: http://localhost:3000
 Connection: keep-alive
-Content-Length: 154
-Content-Security-Policy: default-src 'none'
-Content-Type: text/html; charset=utf-8
-Date: Thu, 17 Oct 2024 10:23:55 GMT
+Content-Length: 47
+Content-Type: application/json; charset=utf-8
+Date: Thu, 17 Oct 2024 10:48:19 GMT
+ETag: W/"2f-i0D5Qo4IGfH+OpTTITmyTnSzFvU"
 Server: nginx/1.25.1
 Vary: Origin
-X-Content-Type-Options: nosniff
 X-Powered-By: Express
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Error</title>
-</head>
-<body>
-<pre>Cannot DELETE /api/contacts</pre>
-</body>
-</html>
+{
+    "message": "Contact was deleted successfully!"
+}
 
 ```
-Note that I ran this task *after* having run Tasks 2.1 and 2.2. Hence, a contact named "Kyrollos" existed.
 
 ### Task 2.4
 ```bash
@@ -296,3 +286,91 @@ X-Powered-By: Express
 }
 ```
 Contact 1 was previously "Kyrollos".
+
+### Task 2.5
+```bash
+vboxuser@CSE5006:~/Documents/assignment2$ http get http://localhost/api/contacts/2/phones 
+
+HTTP/1.1 200 OK
+Access-Control-Allow-Origin: http://localhost:3000
+Connection: keep-alive
+Content-Length: 2
+Content-Type: application/json; charset=utf-8
+Date: Thu, 17 Oct 2024 10:44:27 GMT
+ETag: W/"2-l9Fw4VUO7kr8CvBlt4zaMCqXZ0w"
+Server: nginx/1.25.1
+Vary: Origin
+X-Powered-By: Express
+
+[]
+
+```
+Note that Contact 2 has another name and was added like Contact 1.
+
+### Task 2.6
+```bash
+vboxuser@CSE5006:~/Documents/assignment2$ http get http://localhost/api/contacts/1/phones 
+
+HTTP/1.1 200 OK
+Access-Control-Allow-Origin: http://localhost:3000
+Connection: keep-alive
+Content-Length: 128
+Content-Type: application/json; charset=utf-8
+Date: Thu, 17 Oct 2024 10:44:19 GMT
+ETag: W/"80-TF56k55/DZ8zRh801PSsjvt+IIo"
+Server: nginx/1.25.1
+Vary: Origin
+X-Powered-By: Express
+
+[
+    {
+        "contactId": 1,
+        "createdAt": "2024-10-17T10:44:09.218Z",
+        "id": 1,
+        "name": null,
+        "number": null,
+        "updatedAt": "2024-10-17T10:44:09.218Z"
+    }
+]
+
+```
+
+### Task 2.7
+```bash
+vboxuser@CSE5006:~/Documents/assignment2$ http delete http://localhost/api/contacts/1/phones/1 
+
+HTTP/1.1 200 OK
+Access-Control-Allow-Origin: http://localhost:3000
+Connection: keep-alive
+Content-Length: 45
+Content-Type: application/json; charset=utf-8
+Date: Thu, 17 Oct 2024 10:46:51 GMT
+ETag: W/"2d-FdOer7L1Hk5YcQlrlpn01BrNJmA"
+Server: nginx/1.25.1
+Vary: Origin
+X-Powered-By: Express
+
+{
+    "message": "Phone was deleted successfully!"
+}
+
+```
+
+### Task 2.8
+```bash
+vboxuser@CSE5006:~/Documents/assignment2$ http put http://localhost/api/contacts/1/phones/1 number="0400000000"
+HTTP/1.1 200 OK
+Access-Control-Allow-Origin: http://localhost:3000
+Connection: keep-alive
+Content-Length: 33
+Content-Type: application/json; charset=utf-8
+Date: Thu, 17 Oct 2024 10:49:52 GMT
+ETag: W/"21-Alc536hfGIM8IOU9Ws/tt5VJi28"
+Server: nginx/1.25.1
+Vary: Origin
+X-Powered-By: Express
+
+{
+    "message": "Cannot update Phone"
+}
+```

@@ -8,7 +8,7 @@ Example:
 Choiru's shared repository: https://github.com/choiruzain-latrobe/Assignment2.git
 
 
-Make sure for **your case it is in Private**
+Make sure for **your case it is in Private** (No longer necessary)
 ## Access Database
 1 **Plsql Cheat Sheet:**
 You can refer to the PostgreSQL cheat sheet [here](https://www.postgresqltutorial.com/postgresql-cheat-sheet/).

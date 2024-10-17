@@ -2,10 +2,7 @@
 
 IMPORTANT: Once you've cloned this to your forked repository, ensure that you continuously update this document as you complete each task to demonstrate your ongoing progress.
 
-Please include your shared repository link here: https://github.com/21704248/A2-Kyrollos-21704248.git
-
-Example:
-Choiru's shared repository: https://github.com/choiruzain-latrobe/Assignment2.git
+Kyrollos Iskandar's (21704248) shared repository link: https://github.com/21704248/A2-Kyrollos-21704248.git
 
 
 Make sure for **your case it is in Private** (No longer necessary)
@@ -136,3 +133,11 @@ http get http://localhost/api/contacts/1/phones
 ```
 
 ### Phone API
+
+# Documentation and explanation of my work
+## Task 1
+### Task 1.1
+I looked for the line that said
+<button className='button red' onClick={doDelete}>Delete</button>
+and changed it to
+<button className='button red' onClick={doDelete}>Delete contact</button>

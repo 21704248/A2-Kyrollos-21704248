@@ -168,7 +168,7 @@ input type='text' placeholder='Name' onChange={(e) => setName(e.target.value)} v
 ```
 with the code below
 ```bash
-select value={nameOptions} onChange={(e) => setNameOptions(e.target.value)}>
+<select value={nameOptions} onChange={(e) => setNameOptions(e.target.value)}>
                 <option value="Max Well">Max Well</option>
                 <option value="Tent Well">Tent Well</option>
                 <option value="Went Well">Went Well</option>
@@ -178,7 +178,7 @@ select value={nameOptions} onChange={(e) => setNameOptions(e.target.value)}>
 
 ### Task 1.4
 Found the code below in PhoneList.js
-```bash             tr>
+```bash             <tr>
                         <th>Name</th>
                         <th>Number</th>
                         <th></th>
@@ -196,3 +196,84 @@ to
 
 ## Task 2
 ### Task 2.1
+```bash
+vboxuser@CSE5006:~/Documents/assignment2$ http get http://localhost/api/contacts
+
+HTTP/1.1 200 OK
+Access-Control-Allow-Origin: http://localhost:3000
+Connection: keep-alive
+Content-Length: 106
+Content-Type: application/json; charset=utf-8
+Date: Thu, 17 Oct 2024 10:18:53 GMT
+ETag: W/"6a-zoKUK1o85J3s+038NVY+5/M0eGo"
+Server: nginx/1.25.1
+Vary: Origin
+X-Powered-By: Express
+
+[
+    {
+        "createdAt": "2024-10-17T10:15:45.920Z",
+        "id": 1,
+        "name": "Kyrollos",
+        "updatedAt": "2024-10-17T10:15:45.920Z"
+    }
+]
+
+```
+Note that I ran Task 2.2 before Task 2.1.
+
+### Task 2.2
+```bash
+hvboxuser@CSE5006:~/Documents/assignment2$ http post http://localhost/api/contacts name="Kyrollos"
+
+HTTP/1.1 200 OK
+Access-Control-Allow-Origin: http://localhost:3000
+Connection: keep-alive
+Content-Length: 104
+Content-Type: application/json; charset=utf-8
+Date: Thu, 17 Oct 2024 10:15:45 GMT
+ETag: W/"68-YNVnm50FuqOTsNzNE7qnsT76+QM"
+Server: nginx/1.25.1
+Vary: Origin
+X-Powered-By: Express
+
+{
+    "createdAt": "2024-10-17T10:15:45.920Z",
+    "id": 1,
+    "name": "Kyrollos",
+    "updatedAt": "2024-10-17T10:15:45.920Z"
+}
+
+```
+
+### Task 2.3
+```bash
+vboxuser@CSE5006:~/Documents/assignment2$ http delete http://localhost/api/contacts name="Kyrollos"
+
+HTTP/1.1 404 Not Found
+Access-Control-Allow-Origin: http://localhost:3000
+Connection: keep-alive
+Content-Length: 154
+Content-Security-Policy: default-src 'none'
+Content-Type: text/html; charset=utf-8
+Date: Thu, 17 Oct 2024 10:23:55 GMT
+Server: nginx/1.25.1
+Vary: Origin
+X-Content-Type-Options: nosniff
+X-Powered-By: Express
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot DELETE /api/contacts</pre>
+</body>
+</html>
+
+```
+Note that I ran this task *after* having run Tasks 2.1 and 2.2. Hence, a contact named "Kyrollos" existed.
+
+### Task 2.4

@@ -149,31 +149,49 @@ and changed it to
 
 ### Task 1.2
 I looked for the line in NewPhone.js that said
-##### button className='button green' type='submit'>Add</button
+```bash
+<button className='button green' type='submit'>Add</button>
+```
 and changed it to
-##### button className='button green' type='submit'>Add Kyrollos' Phone</button
+```bash
+<button className='button green' type='submit'>Add Kyrollos' Phone</button>
+```
 
 ### Task 1.3
 Added an array in NewContact.js to store categories.
-##### const [nameOptions, setNameOptions] = useState([]);
+```bash
+const [nameOptions, setNameOptions] = useState([]);
+```
 Then I replaced the line below
-##### input type='text' placeholder='Name' onChange={(e) => setName(e.target.value)} value={name}/
+```bash
+input type='text' placeholder='Name' onChange={(e) => setName(e.target.value)} value={name}/
+```
 with the code below
-##### select value={nameOptions} onChange={(e) => setNameOptions(e.target.value)}>
+```bash
+select value={nameOptions} onChange={(e) => setNameOptions(e.target.value)}>
                 <option value="Max Well">Max Well</option>
                 <option value="Tent Well">Tent Well</option>
                 <option value="Went Well">Went Well</option>
                 <option value="Fred Well">Fred Well</option>
-            </select
+            </select>
+```
 
 ### Task 1.4
 Found the code below in PhoneList.js
-#####               tr>
+```bash             tr>
                         <th>Name</th>
                         <th>Number</th>
                         <th></th>
                     </tr
-##### Changed th>Name<\th to th>Phone Type<\th
+```
+Changed
+```bash
+<th>Name<\th>
+```
+to
+```bash
+<th>Phone Type<\th>
+```
 
 
 ## Task 2

@@ -138,9 +138,13 @@ http get http://localhost/api/contacts/1/phones
 ## Task 1
 ### Task 1.1
 I looked for the line in Contact.js that said
-##### button className='button red' onClick={doDelete}>Delete</button
+'''bash
+<button className='button red' onClick={doDelete}>Delete</button>
+'''
 and changed it to
-##### button className='button red' onClick={doDelete}>Delete contact</button
+'''bash
+<button className='button red' onClick={doDelete}>Delete contact</button>
+'''
 
 ### Task 1.2
 I looked for the line in NewPhone.js that said
@@ -163,9 +167,13 @@ with the code below
 
 ### Task 1.4
 Found the code below in PhoneList.js
-                     tr>
+#####               tr>
                         <th>Name</th>
                         <th>Number</th>
                         <th></th>
                     </tr
-Changed th>Name<\th to th>Phone Type<\th
+##### Changed th>Name<\th to th>Phone Type<\th
+
+
+## Task 2
+### Task 2.1

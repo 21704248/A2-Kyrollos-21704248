@@ -160,3 +160,12 @@ with the code below
                 <option value="Went Well">Went Well</option>
                 <option value="Fred Well">Fred Well</option>
             </select
+
+### Task 1.4
+Found the code below in PhoneList.js
+                     tr>
+                        <th>Name</th>
+                        <th>Number</th>
+                        <th></th>
+                    </tr
+Changed th>Name<\th to th>Phone Type<\th

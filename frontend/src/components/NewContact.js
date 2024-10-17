@@ -3,6 +3,7 @@ import { useState } from 'react';
 function NewContact(props) {
     const {contacts, setContacts} = props;
     const [name, setName] = useState('');
+    const [nameOptions, setNameOptions] = useState([]);
 
     async function createContact(e) {
         e.preventDefault();
@@ -28,7 +29,12 @@ function NewContact(props) {
 
 	return (
         <form className='new-contact' onSubmit={createContact}>
-            <input type='text' placeholder='Name' onChange={(e) => setName(e.target.value)} value={name}/>
+            <select value={nameOptions} onChange={(e) => setNameOptions(e.target.value)}>
+                <option value="Max Well">Max Well</option>
+                <option value="Tent Well">Tent Well</option>
+                <option value="Went Well">Went Well</option>
+                <option value="Fred Well">Fred Well</option>
+            </select>
             <button className='button green' type='submit'>Create Contact</button>
         </form>
 	);

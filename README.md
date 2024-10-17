@@ -374,3 +374,32 @@ X-Powered-By: Express
     "message": "Cannot update Phone"
 }
 ```
+
+
+## Task 3
+### Task 3.1
+Found
+```bash
+body: JSON.stringify({
+                name
+```
+in NewContact.js. Added "address" -->
+```bash
+body: JSON.stringify({
+                name,
+                address
+```
+Also added
+```bash
+const [address, setAddress] = useState('');
+```
+and
+```bash
+setAddress('');
+```
+in the NewContact() function in NewContact.js.
+Added
+```bash
+<h3>{contact.address}</h3>
+```
+as part of the return statement in the Contact() function in Contact.js.

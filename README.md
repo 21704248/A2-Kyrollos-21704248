@@ -138,13 +138,14 @@ http get http://localhost/api/contacts/1/phones
 ## Task 1
 ### Task 1.1
 I looked for the line in Contact.js that said
-'''bash
+```bash
 <button className='button red' onClick={doDelete}>Delete</button>
-'''
+```
+
 and changed it to
-'''bash
+```bash
 <button className='button red' onClick={doDelete}>Delete contact</button>
-'''
+```
 
 ### Task 1.2
 I looked for the line in NewPhone.js that said

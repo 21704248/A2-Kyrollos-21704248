@@ -138,12 +138,12 @@ http get http://localhost/api/contacts/1/phones
 ## Task 1
 ### Task 1.1
 I looked for the line in Contact.js that said
-button className='button red' onClick={doDelete}>Delete</button
+##### button className='button red' onClick={doDelete}>Delete</button
 and changed it to
-button className='button red' onClick={doDelete}>Delete contact</button
+##### button className='button red' onClick={doDelete}>Delete contact</button
 
 ### Task 1.2
 I looked for the line in NewPhone.js that said
-button className='button green' type='submit'>Add</button
+##### button className='button green' type='submit'>Add</button
 and changed it to
-button className='button green' type='submit'>Add Kyrollos' Phone</button
+##### button className='button green' type='submit'>Add Kyrollos' Phone</button
